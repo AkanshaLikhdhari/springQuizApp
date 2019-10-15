@@ -34,7 +34,9 @@ public class QuizController {
 
     @GetMapping(value = "/UserLoginData")
     UserEntity UserLoginData() {
-        return userService.getUserData().get(0);
+
+
+        return userService.getUserData();
     }
 
     @GetMapping(path = "questions", produces = "application/json")

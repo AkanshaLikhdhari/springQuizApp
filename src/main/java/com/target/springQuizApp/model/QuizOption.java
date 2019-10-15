@@ -27,4 +27,15 @@ public class QuizOption implements Serializable {
 
     @Column(name = "question_id")
     private Long questionId;
+
+    public QuizOption() {
+
+    }
+    public QuizOption(long option_id,String optionDescription, long questionId) {
+        this.optionId=option_id;
+        this.optionDescription = optionDescription;
+        this.questionId = questionId;
+    }
+
+
 }

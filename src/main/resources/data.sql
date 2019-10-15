@@ -1,4 +1,4 @@
-insert into user(id,username,password) values (1,'akansha@gmail.com','121');
+insert into user(id,username,password) values (1,'akansha.jhs@gmail.com','121');
 
 insert into quiz_question (question_id, question_description, correct_option_id) values
  (1,'Which of the following is FALSE about abstract classes in Java', 4);

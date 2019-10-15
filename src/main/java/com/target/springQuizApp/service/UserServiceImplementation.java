@@ -11,7 +11,7 @@ public class UserServiceImplementation implements UserService {
     @Autowired
     UserDataRepository userDataRepository;
 
-    public List<UserEntity> getUserData() {
-        return userDataRepository.findAll();
+    public UserEntity getUserData() {
+        return userDataRepository.findAll().get(0);
     }
 }

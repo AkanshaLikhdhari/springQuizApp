@@ -28,7 +28,19 @@ public class QuizQuestion implements Serializable {
     @Column(name = "correct_option_id")
     private Long correctOptionId;
 
-    //Fetch Type Lazy makes sure that the question options are loaded only when required like when getQuestionOptions() method is called
+    public QuizQuestion()
+    {
+
+    }
+    public QuizQuestion(long questionId,String questionDescription, long correctOptionId, List<QuizOption> quizOption, String selected) {
+        this.questionId=questionId;
+        this.questionDescription = questionDescription;
+        this.correctOptionId = correctOptionId;
+        this.quizOption = quizOption;
+        this.selected = selected;
+    }
+
+    //Fetch Type Lazy makes sure that the question options are loaded only when required like when getQuizOption() method is called
     //Cascading decides the deletion of related columns
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "question_id")
